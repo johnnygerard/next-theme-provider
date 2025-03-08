@@ -2,6 +2,7 @@
   "author": "Johnny Gérard",
   "description": "",
   "devDependencies": {
+    "@total-typescript/tsconfig": "^1.0.4",
     "typescript": "^5.8.2"
   },
   "exports": "./index.js",
