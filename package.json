@@ -1,13 +1,15 @@
 {
-  "name": "next.js-theme-provider",
-  "version": "0.0.0",
+  "author": "Johnny Gérard",
+  "description": "",
   "exports": "./index.js",
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "name": "next.js-theme-provider",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Johnny Gérard",
-  "license": "MIT",
-  "description": "",
   "type": "module",
-  "files": ["dist"]
+  "version": "0.0.0"
 }
