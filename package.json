@@ -7,5 +7,7 @@
   },
   "author": "Johnny Gérard",
   "license": "MIT",
-  "description": ""
+  "description": "",
+  "type": "module",
+  "files": ["dist"]
 }
