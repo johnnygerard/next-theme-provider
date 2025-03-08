@@ -1,6 +1,9 @@
 {
   "author": "Johnny Gérard",
   "description": "",
+  "devDependencies": {
+    "typescript": "^5.8.2"
+  },
   "exports": "./index.js",
   "files": [
     "dist"
