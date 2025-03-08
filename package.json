@@ -6,6 +6,10 @@
     "prettier": "3.5.3",
     "typescript": "^5.8.2"
   },
+  "engines": {
+    "node": "22",
+    "npm": "10"
+  },
   "exports": "./index.js",
   "files": [
     "dist"
