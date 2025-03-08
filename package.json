@@ -15,7 +15,7 @@
     "node": "22",
     "npm": "10"
   },
-  "exports": "./index.js",
+  "exports": "./dist/index.js",
   "files": [
     "dist"
   ],
