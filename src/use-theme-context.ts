@@ -3,6 +3,7 @@ import { ThemeContext } from "./theme-context.js";
 
 export const useThemeContext = () => {
   const context = useContext(ThemeContext);
-  if (context) return context;
-  throw new Error("Context provider not found");
+  if (context === null) throw new Error("Context provider not found");
+
+  return context;
 };
