@@ -1,6 +1,10 @@
 {
   "author": "Johnny Gérard",
-  "description": "",
+  "bugs": {
+    "email": "john@jgerard.dev",
+    "url": "https://github.com/johnnygerard/next.js-theme-provider/issues"
+  },
+  "description": "Next.js theme provider plugin",
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.17.4",
     "@total-typescript/tsconfig": "^1.0.4",
@@ -20,6 +24,14 @@
   "files": [
     "dist"
   ],
+  "homepage": "https://github.com/johnnygerard/next.js-theme-provider",
+  "keywords": [
+    "cookie",
+    "next.js",
+    "react",
+    "ssr",
+    "theme"
+  ],
   "license": "MIT",
   "name": "next.js-theme-provider",
   "peerDependencies": {
@@ -27,6 +39,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
+  "repository": "github:johnnygerard/next.js-theme-provider",
   "scripts": {
     "build": "tsc",
     "check-exports": "attw --pack .",
