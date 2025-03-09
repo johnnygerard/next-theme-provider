@@ -1,6 +1,6 @@
-import { THEME_KEY } from "@/constants.js";
-import { type Theme, THEME } from "@/type/theme.js";
 import { cookies } from "next/headers.js";
+import { THEME_KEY } from "./constants.js";
+import { type Theme, THEME } from "./type/theme.js";
 
 /**
  * Server function to load user theme preference from a cookie.

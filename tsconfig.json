@@ -2,9 +2,6 @@
   "extends": "@total-typescript/tsconfig/tsc/dom/library",
   "compilerOptions": {
     "jsx": "react-jsx",
-    "outDir": "dist",
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "outDir": "dist"
   }
 }

@@ -1,5 +1,5 @@
-import type { Theme } from "@/type/theme.js";
 import { createContext } from "react";
+import type { Theme } from "./type/theme.js";
 
 export const ThemeContext = createContext<
   | {
