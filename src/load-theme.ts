@@ -8,7 +8,6 @@ import { type Theme, THEME } from "./type/theme.js";
  * @see {@link https://nextjs.org/docs/app/api-reference/directives/use-server|use-server}
  */
 export const loadTheme = async (): Promise<Theme> => {
-  "use server";
   const cookieStore = await cookies();
   const theme = cookieStore.get(THEME_KEY)?.value;
 
