@@ -9,6 +9,9 @@ type Props = {
   initialTheme: Theme;
 };
 
+/**
+ * React context provider to manage the theme state.
+ */
 export const ThemeProvider = memo(({ children, initialTheme }: Props) => {
   const [theme, setTheme] = useState(initialTheme);
   const channelRef = useRef<BroadcastChannel | null>(null);

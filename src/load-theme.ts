@@ -3,9 +3,8 @@ import { THEME_KEY } from "./constants.js";
 import { type Theme, THEME } from "./type/theme.js";
 
 /**
- * Server function to load user theme preference from a cookie.
+ * Retrieve user theme preference from cookies.
  * @returns User theme preference
- * @see {@link https://nextjs.org/docs/app/api-reference/directives/use-server|use-server}
  */
 export const loadTheme = async (): Promise<Theme> => {
   const cookieStore = await cookies();
