@@ -11,21 +11,21 @@ type Props = {
 
 export const ThemeProvider = memo(({ children, initialTheme }: Props) => {
   const [theme, setTheme] = useState(initialTheme);
-
-  const channelRef = useRef<BroadcastChannel | undefined>(
-    window.BroadcastChannel && new BroadcastChannel(THEME_KEY),
-  );
+  const channelRef = useRef<BroadcastChannel | null>(null);
 
   // Listen for theme change from other tabs
   useEffect(() => {
-    const channel = channelRef.current;
-
-    if (channel === undefined) {
+    if (window.BroadcastChannel === undefined) {
       console.warn(
-        "Unsupported BroadcastChannel: Unable to synchronize theme across tabs.",
+        "Unsupported BroadcastChannel:",
+        "Unable to synchronize theme across tabs.",
       );
+
       return;
     }
+
+    const channel = new BroadcastChannel(THEME_KEY);
+    channelRef.current = channel;
 
     channel.onmessage = ({ data }: MessageEvent<Theme>) => {
       setTheme(data);
