@@ -43,7 +43,10 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
-  "repository": "github:johnnygerard/next-theme-provider",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnnygerard/next-theme-provider.git"
+  },
   "scripts": {
     "build": "tsc",
     "check-exports": "attw --pack .",
