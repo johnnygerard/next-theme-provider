@@ -6,4 +6,5 @@ export const ThemeContext = createContext<{
   theme: Theme;
   setTheme: (theme: Theme) => void;
   toggleTheme: () => void;
+  isDark: boolean | null;
 } | null>(null);

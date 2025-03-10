@@ -15,6 +15,11 @@ type Props = {
 export const ThemeProvider = memo(({ children, initialTheme }: Props) => {
   const [theme, setTheme] = useState(initialTheme);
   const channelRef = useRef<BroadcastChannel | null>(null);
+  const PREFERS_DARK = "(prefers-color-scheme: dark)";
+
+  const [isDark, setIsDark] = useState(
+    theme === THEME.SYSTEM ? null : theme === THEME.DARK,
+  );
 
   // Listen for theme change from other tabs
   useEffect(() => {
@@ -44,8 +49,33 @@ export const ThemeProvider = memo(({ children, initialTheme }: Props) => {
     document.documentElement.setAttribute("data-theme", theme);
   }, [theme]);
 
+  // Initialize system theme
+  useEffect(() => {
+    if (isDark === null) setIsDark(window.matchMedia(PREFERS_DARK).matches);
+  }, []);
+
+  // Listen for system theme changes
+  useEffect(() => {
+    const systemQuery = window.matchMedia(PREFERS_DARK);
+
+    const listener = (event: MediaQueryListEvent) => {
+      if (theme === THEME.SYSTEM) setIsDark(event.matches);
+    };
+
+    systemQuery.addEventListener("change", listener);
+
+    return () => {
+      systemQuery.removeEventListener("change", listener);
+    };
+  }, []);
+
   const handleThemeChange = (theme: Theme): void => {
     setTheme(theme);
+    setIsDark(
+      theme === THEME.SYSTEM
+        ? window.matchMedia(PREFERS_DARK).matches
+        : theme === THEME.DARK,
+    );
 
     // Persist theme with a cookie
     document.cookie = [
@@ -62,8 +92,7 @@ export const ThemeProvider = memo(({ children, initialTheme }: Props) => {
 
   const toggleTheme = (): void => {
     const isDark =
-      (theme === THEME.SYSTEM &&
-        matchMedia("(prefers-color-scheme: dark)").matches) ||
+      (theme === THEME.SYSTEM && window.matchMedia(PREFERS_DARK).matches) ||
       theme === THEME.DARK;
 
     handleThemeChange(isDark ? THEME.LIGHT : THEME.DARK);
@@ -71,7 +100,12 @@ export const ThemeProvider = memo(({ children, initialTheme }: Props) => {
 
   return (
     <ThemeContext.Provider
-      value={{ theme, setTheme: handleThemeChange, toggleTheme }}
+      value={{
+        theme,
+        setTheme: handleThemeChange,
+        toggleTheme,
+        isDark,
+      }}
     >
       {children}
     </ThemeContext.Provider>
