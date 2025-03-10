@@ -37,6 +37,11 @@ export const ThemeProvider = memo(({ children, initialTheme }: Props) => {
 
     channel.onmessage = ({ data }: MessageEvent<Theme>) => {
       setTheme(data);
+      setIsDark(
+        data === THEME.SYSTEM
+          ? window.matchMedia(PREFERS_DARK).matches
+          : data === THEME.DARK,
+      );
     };
 
     return () => {
