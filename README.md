@@ -4,14 +4,13 @@ This plugin provides the core functionality to build Next.js applications that r
 the user's theme preference (system, light or dark).
 
 Because a cookie is used to persist the theme, Next.js always selects the
-[dynamic rendering](https://nextjs.org/docs/app/building-your-application/rendering/server-components#dynamic-rendering) strategy.  
-Local storage is not used because it is not available on the server side and
-would cause [hydration mismatch errors](https://nextjs.org/docs/messages/react-hydration-error)
-if used on the client side.
+[dynamic rendering](https://nextjs.org/docs/app/building-your-application/rendering/server-components#dynamic-rendering) strategy. Local storage is not used because it is not available
+on the server side and would cause [hydration mismatch errors](https://nextjs.org/docs/messages/react-hydration-error) if used on the client
+side.
 
 Because the theme is properly initialized on the server side, users see the correct theme
-on the first render, without any flickering.  
-Thanks to `BroadcastChannel`, the theme is synchronized across all tabs.
+on the first render, without any flickering. Thanks to `BroadcastChannel`, the theme
+is synchronized across all tabs.
 
 ## Installation
 
@@ -73,9 +72,8 @@ export const ThemeToggle = () => {
 };
 ```
 
-Lastly, you will need to style both light and dark themes.  
-If you are using Tailwind CSS 4, add the following custom variant in `app/globals.css` to
-override the default dark variant:
+Lastly, you will need to style both light and dark themes. If you are using Tailwind CSS 4,
+add the following custom variant in `app/globals.css` to override the default dark variant:
 
 ```css
 @custom-variant dark {
