@@ -2,7 +2,7 @@
   "author": "Johnny Gérard",
   "bugs": {
     "email": "john@jgerard.dev",
-    "url": "https://github.com/johnnygerard/next.js-theme-provider/issues"
+    "url": "https://github.com/johnnygerard/next-theme-provider/issues"
   },
   "description": "Next.js theme provider plugin",
   "devDependencies": {
@@ -28,7 +28,7 @@
     "dist",
     "src"
   ],
-  "homepage": "https://github.com/johnnygerard/next.js-theme-provider",
+  "homepage": "https://github.com/johnnygerard/next-theme-provider",
   "keywords": [
     "cookie",
     "next.js",
@@ -37,13 +37,13 @@
     "theme"
   ],
   "license": "MIT",
-  "name": "next.js-theme-provider",
+  "name": "next-theme-provider",
   "peerDependencies": {
     "next": "^15.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
-  "repository": "github:johnnygerard/next.js-theme-provider",
+  "repository": "github:johnnygerard/next-theme-provider",
   "scripts": {
     "build": "tsc",
     "check-exports": "attw --pack .",

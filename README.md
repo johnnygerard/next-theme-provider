@@ -16,7 +16,7 @@ Thanks to `BroadcastChannel`, the theme is synchronized across all tabs.
 ## Installation
 
 ```shell
-npm install next.js-theme-provider
+npm install next-theme-provider
 ```
 
 ## Usage
@@ -24,7 +24,7 @@ npm install next.js-theme-provider
 Use this minimal example to update your root layout:
 
 ```jsx
-import { loadTheme, ThemeProvider } from "next.js-theme-provider";
+import { loadTheme, ThemeProvider } from "next-theme-provider";
 
 export default async function RootLayout({ children }) {
   const theme = await loadTheme();
@@ -43,7 +43,7 @@ Here is a simple theme selector component:
 
 ```jsx
 "use client";
-import { THEME, useThemeContext } from "next.js-theme-provider";
+import { THEME, useThemeContext } from "next-theme-provider";
 
 export const ThemeSelector = () => {
   const { theme, setTheme } = useThemeContext();
@@ -64,7 +64,7 @@ but it is a simpler design:
 
 ```jsx
 "use client";
-import { useThemeContext } from "next.js-theme-provider";
+import { useThemeContext } from "next-theme-provider";
 
 export const ThemeToggle = () => {
   const { toggleTheme } = useThemeContext();

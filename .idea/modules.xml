@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/next.js-theme-provider.iml" filepath="$PROJECT_DIR$/.idea/next.js-theme-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/next-theme-provider.iml" filepath="$PROJECT_DIR$/.idea/next-theme-provider.iml" />
     </modules>
   </component>
 </project>
