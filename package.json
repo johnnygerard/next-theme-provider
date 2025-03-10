@@ -48,11 +48,12 @@
     "url": "git+https://github.com/johnnygerard/next-theme-provider.git"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "rm -rf dist && tsc",
     "check-exports": "attw --pack .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "prepublishOnly": "npm run build"
   },
   "type": "module",
   "types": "./dist/index.d.ts",
