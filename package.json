@@ -6,22 +6,18 @@
   },
   "description": "Next.js theme provider plugin",
   "devDependencies": {
-    "@arethetypeswrong/cli": "^0.17.4",
+    "@arethetypeswrong/cli": "^0.18.2",
     "@eslint/js": "^9.22.0",
     "@total-typescript/tsconfig": "^1.0.4",
-    "@types/react": "^19.0.10",
-    "@types/react-dom": "^19.0.4",
-    "eslint": "^9.22.0",
-    "next": "^15.2.1",
-    "prettier": "3.5.3",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "typescript": "^5.8.2",
-    "typescript-eslint": "^8.26.0"
-  },
-  "engines": {
-    "node": "22",
-    "npm": "10"
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "eslint": "^9.29.0",
+    "next": "^15.3.4",
+    "prettier": "3.6.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.35.0"
   },
   "exports": "./dist/index.js",
   "files": [
@@ -57,5 +53,5 @@
   },
   "type": "module",
   "types": "./dist/index.d.ts",
-  "version": "1.0.1"
+  "version": "1.0.2"
 }
